@@ -13,7 +13,7 @@ export default function Update() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:4000/update/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/update/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setname(data.name)
@@ -25,7 +25,7 @@ export default function Update() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch(`http://localhost:4000/update/${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/update/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

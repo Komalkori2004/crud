@@ -1,9 +1,17 @@
 /* 🌑 Full page center */
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+
+}
 .update-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
   font-family: "Segoe UI", sans-serif;
 }
@@ -12,7 +20,8 @@
 .update-card {
   background: #151515;
   padding: 35px 40px;
-  width: 360px;
+  width: 100%;
+  max-width: 360px;  ; 
   border-radius: 14px;
   box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
   text-align: center;
@@ -35,8 +44,9 @@
   border-radius: 6px;
   color: #fff;
   outline: none;
-}
 
+  box-sizing: border-box;  /* 👈 overflow fix */
+}
 .update-card input::placeholder {
   color: #aaa;
 }
@@ -60,4 +70,25 @@
 
 .update-card button:hover {
   opacity: 0.9;
+}
+
+@media (max-width: 420px) {
+   .update-container {
+    padding: 16px;        /* 👈 mobile margin */
+  }
+  .update-card {
+    padding: 28px 22px;   /* 👈 thoda compact */
+  }
+
+  .update-card h1 {
+    font-size: 22px;
+  }
+
+  .update-card input {
+    font-size: 14px;
+  }
+
+  .update-card button {
+    font-size: 14px;
+  }
 }

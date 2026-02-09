@@ -24,7 +24,11 @@
   margin-bottom: 25px;
   letter-spacing: 1.5px;
 }
-
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #333;
+}
 /* ✍️ Inputs */
 .add-card input {
   width: 100%;
@@ -33,6 +37,7 @@
   border: 1px solid #333;
   border-radius: 6px;
   color: #fff;
+   box-sizing: border-box;
   outline: none;
 }
 
@@ -60,3 +65,43 @@
 .add-card button:hover {
   opacity: 0.9;
 }
+
+/* 📱 Small screens (≤ 400px) */
+@media (max-width: 400px) {
+  .add-container {
+    padding: 16px;
+  }
+
+  .add-card {
+    width: 100%;              /* 👈 full width */
+    max-width: 340px;         /* 👈 safe limit */
+    padding: 26px 22px;       /* 👈 reduced padding */
+  }
+
+  .add-card h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .add-card input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .add-card button {
+    padding: 11px;
+    font-size: 14px;
+  }
+}
+
+/* 📱 Extra small screens (≤ 320px) */
+@media (max-width: 320px) {
+  .add-card {
+    padding: 22px 18px;
+  }
+
+  .add-card h2 {
+    font-size: 18px;
+  }
+}
+
