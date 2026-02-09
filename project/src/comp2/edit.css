@@ -1,0 +1,63 @@
+/* 🌑 Full page center */
+.update-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🟡 Form card */
+.update-card {
+  background: #151515;
+  padding: 35px 40px;
+  width: 360px;
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
+  text-align: center;
+}
+
+/* 🟡 Heading */
+.update-card h1 {
+  color: #d4af37;
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+  font-size: 26px;
+}
+
+/* ✍️ Inputs */
+.update-card input {
+  width: 100%;
+  padding: 12px;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  outline: none;
+}
+
+.update-card input::placeholder {
+  color: #aaa;
+}
+
+.update-card input:focus {
+  border-color: #d4af37;
+}
+
+/* 🟡 Update button */
+.update-card button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111;
+}
+
+.update-card button:hover {
+  opacity: 0.9;
+}

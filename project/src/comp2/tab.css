@@ -1,0 +1,108 @@
+/* 🌑 Page background */
+body {
+  background-color: #0f0f0f;
+  font-family: "Segoe UI", sans-serif;
+  color: #f5f5f5;
+}
+
+/* 🟡 Main container */
+.admin-container {
+  width: 90%;
+  margin: 40px auto;
+  background: #151515;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+/* 🟡 Heading */
+.admin-container h2 {
+  text-align: center;
+  color: #d4af37;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* ➕ Add User button */
+.add-btn {
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: #111;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
+}
+
+/* 📋 Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 🟡 Table header */
+thead {
+  background: #d4af37;
+  color: #111;
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+}
+
+/* 🔁 Row hover */
+tbody tr {
+  border-bottom: 1px solid #333;
+}
+
+tbody tr:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+/* ✏️ Action buttons */
+.action-btn {
+  padding: 6px 12px;
+  margin: 0 4px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ✏️ Edit button */
+.edit-btn {
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+}
+
+.edit-btn:hover {
+  background: #d4af37;
+  color: #111;
+}
+
+/* ❌ Delete button */
+.delete-btn {
+  background: transparent;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+}
+
+.delete-btn:hover {
+  background: #ff4d4d;
+  color: #111;
+}
+
+/* 🔗 Remove NavLink underline */
+a {
+  text-decoration: none;
+}
