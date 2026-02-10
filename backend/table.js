@@ -1,17 +1,20 @@
 
 
 const mongoose=require("mongoose")
+require("dotenv").config()
 
 const express=require("express")
 const cors=require("cors")
 
+
 const app=express()
+
 
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb://127.0.0.1:27017/user")
-.then(()=>console.log("MongoDB connected"))
+mongoose.connect(process.env.MONGO_URI)
+.then(()=>console.log("MongoDB Altlas connected"))
 .catch((err)=>console.log("Error",err))
 
 const userSchema = new mongoose.Schema({
@@ -20,7 +23,7 @@ const userSchema = new mongoose.Schema({
     course: String
 
 })
-const Data = mongoose.model("Data", userSchema, "courses")
+const Data = mongoose.model("Data", userSchema,"courses")
 
 
 app.get("/", async (req, res) => {
@@ -85,7 +88,8 @@ app.delete("/:id", (req,res)=>{
 
 
 
+const PORT = process.env.PORT || 4000;
 
-app.listen(4000, () => {
-    console.log("server running on port 4000")
-})
+app.listen(PORT, () => {
+  console.log(`server running on port ${PORT}`);
+});
