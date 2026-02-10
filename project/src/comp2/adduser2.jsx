@@ -9,36 +9,37 @@ export default function AddUser() {
     const [course, setcourse] = useState("")
 
 
-   const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const UserData = {
-        name,
-        age,
-        course,
-    };
+  const UserData = { name, age, course };
 
-    fetch(`${import.meta.env.VITE_API_URL}/add`, {
+  try {
+    const res = await fetch(
+      `${import.meta.env.VITE_API_URL}/add`,
+      {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(UserData),
-    })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log("response from server", data);
-        })
-        .catch((err) => {
-            console.log("error", err);
-        })
-        .then(() => {
-            setname("");
-            setage("");
-            setcourse("");
-            alert("User Added");
-            window.location.href = "/";
-        });
+      }
+    );
+
+    const data = await res.json();
+    console.log("response from server", data);
+
+    alert("User Added Successfully ✅");
+
+    setname("");
+    setage("");
+    setcourse("");
+
+    window.location.href = "/";
+  } catch (err) {
+    console.log("error", err);
+    alert("Something went wrong ❌");
+  }
 };
 
 
